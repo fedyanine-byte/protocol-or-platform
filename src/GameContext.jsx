@@ -40,7 +40,6 @@ export function GameProvider({ children }) {
     const snap = await get(ref(db, `games/${FIXED_CODE}`))
     if (!snap.exists()) throw new Error('Game not found. Try again later.')
     const game = snap.val()
-    if (game.status !== 'lobby') throw new Error('Game already started.')
 
     const usedColors = Object.values(game.teams || {}).map(t => t.color)
     const color = TEAM_COLORS.find(c => !usedColors.includes(c))
