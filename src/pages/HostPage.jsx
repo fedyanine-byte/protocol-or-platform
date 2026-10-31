@@ -250,13 +250,11 @@ export default function HostPage() {
         {/* Question + timer */}
         <div className="flex items-start gap-6 flex-shrink-0">
           <div className="flex-1">
-            <div className="mb-2">
+            <div className="mb-3">
               <QuestionPills current={qi} />
             </div>
-            <p className="text-white/40 text-sm uppercase tracking-widest mb-1">
-              Protocol or Platform? · {q.item}
-            </p>
-            <p className="text-white font-black text-4xl leading-tight">{q.hint}</p>
+            <p className="text-white font-black text-6xl leading-tight mb-2">{q.item}</p>
+            <p className="text-white/60 text-3xl leading-snug">{q.hint}</p>
           </div>
           <div className="flex items-center gap-5 flex-shrink-0 pt-2">
             <div className="text-center">
@@ -338,7 +336,7 @@ export default function HostPage() {
               </span>
               <QuestionPills current={qi} />
             </div>
-            <p className="text-white font-black text-3xl">
+            <p className="text-white font-black text-4xl">
               {q.item} → <span className={ansColor?.text}>{correctLabel}</span>
             </p>
           </div>
@@ -369,7 +367,7 @@ export default function HostPage() {
 
           {/* Explanation */}
           <div className="flex-1 card flex flex-col">
-            <p className="text-white font-black text-3xl leading-tight mb-4">{q.item}</p>
+            <p className="text-white font-black text-5xl leading-tight mb-4">{q.item}</p>
             <div className="flex-1 flex flex-col justify-between">
               <div>
                 <p className="text-game-accent font-black text-base mb-3 uppercase tracking-wide">
