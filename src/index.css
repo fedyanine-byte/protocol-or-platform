@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body { @apply bg-gray-950 text-white; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-game-accent text-gray-950 font-bold px-6 py-3 rounded-xl
+           hover:bg-teal-300 active:scale-95 transition-all duration-150
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white/10 text-white font-semibold px-6 py-3 rounded-xl
+           hover:bg-white/20 active:scale-95 transition-all duration-150
+           border border-white/20;
+  }
+  .card {
+    @apply bg-white/5 border border-white/10 rounded-2xl p-6;
+  }
+}
+
+/* Timer ring */
+.timer-ring {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.timer-ring-progress {
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+/* Answer bar animation */
+.answer-bar {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Score pop */
+@keyframes scorePop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+.score-pop { animation: scorePop 0.6s ease-out; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-white/20 rounded-full; }
