@@ -120,7 +120,7 @@ export default function HostPage() {
   const ansCount  = Object.keys(answers).length
   const allIn     = teamCount > 0 && ansCount >= teamCount
   const isLastQ   = qi >= TOTAL - 1
-  const joinUrl   = `${window.location.origin}/protocol-or-platform/join`
+  const joinUrl   = `${window.location.origin}/protocol-or-platform/`
 
   // ── LOBBY ───────────────────────────────────────────────────────────────────
   if (g.status === 'lobby') {
